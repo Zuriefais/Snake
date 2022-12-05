@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/zuriefais/Desktop/snakeOnline/snakeOnline.csproj",
+      "projectUniqueName": "/Users/zuriefais/Desktop/snakeOnline/Snake/snakeOnline.csproj",
       "projectName": "snakeOnline",
-      "projectPath": "/Users/zuriefais/Desktop/snakeOnline/snakeOnline.csproj",
+      "projectPath": "/Users/zuriefais/Desktop/snakeOnline/Snake/snakeOnline.csproj",
       "packagesPath": "/Users/zuriefais/.nuget/packages/",
-      "outputPath": "/Users/zuriefais/Desktop/snakeOnline/obj/",
+      "outputPath": "/Users/zuriefais/Desktop/snakeOnline/Snake/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/zuriefais/.nuget/NuGet/NuGet.Config"
