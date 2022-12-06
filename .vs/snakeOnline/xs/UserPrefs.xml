@@ -1,0 +1,29 @@
+﻿<Properties StartupConfiguration="{53504C2C-5D6F-4036-8D82-D21A0A581EEB}|Default">
+  <MonoDevelop.Ide.ItemProperties.snakeOnline PreferredExecutionTarget="MonoDevelop.Default" />
+  <Xamarin.Addins.Core.Project ActiveDebugTarget="MyAppleMacCatalystID" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workbench ActiveDocument="CellPrinter.cs">
+    <Files>
+      <File FileName="CellPrinter.cs" Line="36" Column="10" />
+      <File FileName="Program.cs" Line="1" Column="1" />
+      <File FileName="Snake.cs" />
+      <File FileName="World.cs" Line="12" Column="17" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="snakeOnline" expanded="True">
+            <Node name="snakeOnline" expanded="True">
+              <Node name="CellPrinter.cs" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+</Properties>

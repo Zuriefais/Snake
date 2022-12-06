@@ -35,6 +35,5 @@ public class CellPrinter
             printedCells = printedCells+"\n"+printedLine;
         }
         Console.WriteLine(printedCells);
-        
     }
 }

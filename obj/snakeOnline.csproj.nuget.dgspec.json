@@ -20,6 +20,7 @@
           "net7.0"
         ],
         "sources": {
+          "/usr/local/share/dotnet/library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -37,6 +38,12 @@
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
+          "dependencies": {
+            "AnyConsole": {
+              "target": "Package",
+              "version": "[1.0.72, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
