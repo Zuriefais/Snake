@@ -1,3 +1,5 @@
+using Spectre.Console;
+
 public class CellPrinter
 {
     private int width;
@@ -15,7 +17,7 @@ public class CellPrinter
 
     public void Print() 
     {
-        Console.Clear();
+        AnsiConsole.Clear();
         string printedCells = "";
         for (int y = 0; y < height; y++)
         {
@@ -34,6 +36,6 @@ public class CellPrinter
             }
             printedCells = printedCells+"\n"+printedLine;
         }
-        Console.WriteLine(printedCells);
+        AnsiConsole.MarkupLine(printedCells);
     }
 }

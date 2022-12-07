@@ -1,11 +1,9 @@
-﻿using AnyConsole;
-
-ExtendedConsole Console = new();
+﻿using Spectre.Console;
 
 int width = 10;
 int height = 10;
 World world = new();
-CellPrinter cellPrinter = new(20, 20, world);
+CellPrinter cellPrinter = new(15, 15, world);
 Console.Title = "25*25 tiles snake";
 
 for (int y = 0; y < height; y++)
@@ -17,18 +15,33 @@ for (int y = 0; y < height; y++)
         }
     }
 }
-Vector2Int snakePosition = new(width/2, height/2);
-world.AddCell(snakePosition, new("0"));
-
+AsyncTest();
+Snake snake = new(world);
 while(true) {
     Input();
-} 
+}
+
+async void AsyncTest() {
+
+    await Task.Run(
+    () => 
+    {
+        for (int i = 0; i < 20; i++)
+        {
+            Console.WriteLine("hi");
+        }
+    }
+    ); 
+    
+    
+}
 
 void Input() {
     ConsoleKeyInfo key = Console.ReadKey();
     if(key.Key == ConsoleKey.W || key.Key == ConsoleKey.A || key.Key == ConsoleKey.S || key.Key == ConsoleKey.D) 
     {
         Walk(key);
+        snake.Move();
     }
     else if(key.Key == ConsoleKey.Escape)
     {
@@ -49,4 +62,5 @@ void Walk(ConsoleKeyInfo key) {
     };
     Vector2Int moveDirection;
     map.TryGetValue(key.Key, out moveDirection);
+    snake.moveDirection = moveDirection;
 }

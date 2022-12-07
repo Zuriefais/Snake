@@ -39,9 +39,9 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "dependencies": {
-            "AnyConsole": {
+            "Spectre.Console": {
               "target": "Package",
-              "version": "[1.0.72, )"
+              "version": "[0.45.0, )"
             }
           },
           "imports": [

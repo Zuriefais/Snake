@@ -28,3 +28,5 @@
 /Users/zuriefais/Desktop/snakeOnline/Snake/obj/Debug/net7.0/snakeOnline.pdb
 /Users/zuriefais/Desktop/snakeOnline/Snake/obj/Debug/net7.0/snakeOnline.genruntimeconfig.cache
 /Users/zuriefais/Desktop/snakeOnline/Snake/obj/Debug/net7.0/ref/snakeOnline.dll
+/Users/zuriefais/Desktop/snakeOnline/Snake/obj/Debug/net7.0/snakeOnline.csproj.CopyComplete
+/Users/zuriefais/Desktop/snakeOnline/Snake/bin/Debug/net7.0/Spectre.Console.dll
