@@ -76,25 +76,24 @@
     ]
   },
   "packageFolders": {
-    "/Users/zuriefais/.nuget/packages/": {}
+    "C:\\Users\\zurie\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/zuriefais/Desktop/snakeOnline/Snake/snakeOnline.csproj",
+      "projectUniqueName": "C:\\Users\\zurie\\OneDrive\\Документы\\GitHub\\Snake\\snakeOnline.csproj",
       "projectName": "snakeOnline",
-      "projectPath": "/Users/zuriefais/Desktop/snakeOnline/Snake/snakeOnline.csproj",
-      "packagesPath": "/Users/zuriefais/.nuget/packages/",
-      "outputPath": "/Users/zuriefais/Desktop/snakeOnline/Snake/obj/",
+      "projectPath": "C:\\Users\\zurie\\OneDrive\\Документы\\GitHub\\Snake\\snakeOnline.csproj",
+      "packagesPath": "C:\\Users\\zurie\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\zurie\\OneDrive\\Документы\\GitHub\\Snake\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/Users/zuriefais/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\zurie\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net7.0"
       ],
       "sources": {
-        "/usr/local/share/dotnet/library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -134,7 +133,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.100/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
       }
     }
   }

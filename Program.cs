@@ -1,5 +1,8 @@
 ﻿using Spectre.Console;
 
+Console.WriteLine(new Style(foreground: Color.Blue).ToMarkup());
+Console.ReadKey();
+
 int width = 10;
 int height = 10;
 World world = new();

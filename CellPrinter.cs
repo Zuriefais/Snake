@@ -12,11 +12,11 @@ public class CellPrinter
         this.width = width;
         this.height = height;
         this.world = world;
-        world.onChangeCell += Print;
     }
 
     public void Print() 
     {
+        world.ComputeCells();
         AnsiConsole.Clear();
         string printedCells = "";
         for (int y = 0; y < height; y++)
@@ -25,10 +25,11 @@ public class CellPrinter
             for (int x = 0; x < width; x++)
             {
                 Vector2Int pos = new(x+cameraOffset.x,y+cameraOffset.y);
-                Cell cell;
+                Cell ?cell;
                 if (world.cells.TryGetValue(pos, out cell))
                 {
-                    printedLine = printedLine+world.cells[pos].printedCell;
+                    if(cell != null)
+                    printedLine = printedLine + world.cells[pos].printedCell;
                 }
                 else {
                     printedLine = printedLine+" ";
@@ -37,5 +38,6 @@ public class CellPrinter
             printedCells = printedCells+"\n"+printedLine;
         }
         AnsiConsole.MarkupLine(printedCells);
+        
     }
 }

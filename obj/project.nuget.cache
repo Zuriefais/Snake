@@ -1,11 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "RXPQPkgTJHj/OUrw/H+28P0rR6cFasb1tl59qV1BALw2u3J9QC6CRmlbRTMgoqUrfNH+Hh7AcNnFQQyv+vtCJQ==",
+  "dgSpecHash": "Gi/zVxW3Dcz7bFRLDpD8liypj2CsIxgjdDiZDcVtyhQV/chaWDXgFFz4Zqwl/qdjWsUamlE9Fap4Q10drq7dkQ==",
   "success": true,
-  "projectFilePath": "/Users/zuriefais/Desktop/snakeOnline/Snake/snakeOnline.csproj",
+  "projectFilePath": "C:\\Users\\zurie\\OneDrive\\Документы\\GitHub\\Snake\\snakeOnline.csproj",
   "expectedPackageFiles": [
-    "/Users/zuriefais/.nuget/packages/spectre.console/0.45.0/spectre.console.0.45.0.nupkg.sha512",
-    "/Users/zuriefais/.nuget/packages/system.memory/4.5.5/system.memory.4.5.5.nupkg.sha512"
+    "C:\\Users\\zurie\\.nuget\\packages\\spectre.console\\0.45.0\\spectre.console.0.45.0.nupkg.sha512",
+    "C:\\Users\\zurie\\.nuget\\packages\\system.memory\\4.5.5\\system.memory.4.5.5.nupkg.sha512"
   ],
   "logs": []
 }
