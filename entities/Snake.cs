@@ -3,9 +3,8 @@ using Spectre.Console;
 public class Snake: WorldObject
 {
     public Vector2Int moveDirection = new(1, 0);
-    private World world;
 
-    public Snake(World world, int length, Vector2Int position) {
+    public Snake(World world, int length, Vector2Int pos, Input input) {
         this.world = world;
         for (int i = 0; i < length; i++)
         {
@@ -13,39 +12,46 @@ public class Snake: WorldObject
                 new(
                     '■',
                     new Style(foreground: new Color(15, 71, 45)),
-                    position.Plus(moveDirection.Multiply(i))
+                    moveDirection.Multiply(i)
                 )
             );   
+        }
+        position = pos;
+
+        input.onW += delegate { SetMoveDir(new(0, -1)); };
+        input.onA += delegate { SetMoveDir(new(-1, 0)); };
+        input.onS += delegate { SetMoveDir(new(0, 1)); };
+        input.onD += delegate { SetMoveDir(new(1, 0)); };
+    }
+
+    private void SetMoveDir(Vector2Int vec) 
+    {
+        if (!vec.reversed.IsEqual(moveDirection))
+        {
+            moveDirection = vec;
         }
     }
 
     public void Move() 
     {
-        Vector2Int pos = new(cells[0].x + moveDirection.x, cells[0].y + moveDirection.y);
-        if(world.GetCell(pos).printedCell == "#") 
-        {
-            Console.Clear();
-            Console.WriteLine("You are dead");
-
-            Environment.Exit(0);
-        } 
-        else if(world.GetCell(pos).printedCell == "⭕") 
-        {
-            bodyCells.Insert(0,new());
-        } 
+        Vector2Int pos = cells[cells.Count-1].position.Plus(moveDirection).Plus(this.position);
+        world.debugInfo["snakeHeadPosition"] = pos.x + ", " + pos.y;
+        List<Cell> nextCells = world.GetCells(new() {typeof(Walls), typeof(Snake)}, pos);
+        if(nextCells.Count != 0) 
+        {   
+            world.state = World.State.Lose;
+        }
         else
         {
-            cells.RemoveAt(cells.Count-1);
-            cells.Insert(
-                0, 
+            cells.Add(
                 new(
                     '■',
                     new Style(foreground: new Color(15, 71, 45)),
-                    cells[0].position.Plus(moveDirection)
-                ));
+                    cells[cells.Count-1].position.Plus(moveDirection)
+            ));
+            cells.RemoveAt(0);
         }
-        foreach(var cell in bodyCells) {
-            world.AddCell(cell, new("[green]■[/]"));
-        }
+        world.debugInfo["snakePosition"] = position.x + ", " + position.y;
+        RecalculatePosition();
     }
 }

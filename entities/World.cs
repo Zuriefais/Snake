@@ -3,6 +3,10 @@ public class World {
     public Dictionary<Vector2Int, Cell?> cells {get; private set;} = new();
     public int width {get; private set;}
     public int height {get; private set;}
+    public State state = State.InGame;
+
+    public List<string> log = new();
+    public Dictionary<string, string> debugInfo = new();
 
     public World(int width, int height) 
     {
@@ -21,29 +25,45 @@ public class World {
                     obj.position.x + cell.position.x,
                     obj.position.y + cell.position.y
                 );
-                cells.Add(pos, cell);
+                if (!cells.TryAdd(pos, cell))
+                {
+                    cells[pos] = cell;
+                }
             }
         }
     }
 
-    public bool IsEmpty(Vector2Int position) 
+    public List<Cell> GetCells(List<Type> worldObjectType, Vector2Int pos) 
     {
-        bool isEmpty = true;
+        List<Cell> cells = new();
         foreach (var obj in objects)
         {
-            Vector2Int positionLocal = position.Minus(obj.position);
-            foreach (var cell in obj.cells)
+            foreach (var type in worldObjectType)
             {
-                if(obj.GetCell(positionLocal) != null) {
-                    isEmpty = false;
+                if (obj.GetType() == type)
+                {
+                    Vector2Int localPos = pos.Minus(obj.position);
+                    Cell? cell = obj.GetCell(localPos);
+                    if (cell != null)
+                    {
+                        cells.Add(cell);
+                    }
                 }
             }
+            
         }
-        return isEmpty;
+        return cells;
     }
 
     public void AddObject(WorldObject obj) 
     {
         objects.Add(obj);
+    }
+
+    public enum State
+    {
+        InGame,
+        Lose,
+        Win
     }
 }

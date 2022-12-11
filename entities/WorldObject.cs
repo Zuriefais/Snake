@@ -1,9 +1,8 @@
-using Spectre.Console;
-
-public class WorldObject
+public abstract class WorldObject
 {
     public List<Cell> cells {get; private set;} = new();
     public Vector2Int position;
+    public World world;
 
     public void AddCell(Cell cell) 
     {
@@ -20,5 +19,29 @@ public class WorldObject
             }
         }
         return cell;
+    }
+
+    public void RecalculatePosition() {
+        Vector2Int objPosDif = new(int.MaxValue, int.MaxValue);
+        foreach (var cell in cells)
+        {
+            Vector2Int pos = cell.position;
+            if (pos.x < objPosDif.x) 
+            {
+                objPosDif.x = pos.x;
+            }
+            if (pos.y < objPosDif.y) 
+            {
+                objPosDif.y = pos.y;
+            }
+        }
+        Vector2Int newObjPos = position.Plus(objPosDif);
+        world.debugInfo["objPosDif"] = objPosDif.x + ", " + objPosDif.y;
+        foreach (var cell in cells)
+        {
+            cell.position = cell.position.Minus(objPosDif);
+        }
+        position = newObjPos;
+        world.debugInfo["snakePositionAfterRecalc"] = position.x + ", " + position.y;
     }
 }
