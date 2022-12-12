@@ -59,7 +59,7 @@ public class Snake: WorldObject
             else
             {
                 WorldObject? obj = world.GetObject(typeof(Food));
-                if(obj != null) obj.RemoveCell(pos.Minus(obj.position));
+                if(obj != null) world.DestroyObject(obj);
             }
             
         }

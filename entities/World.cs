@@ -44,6 +44,12 @@ public class World {
         return null;
     }
 
+    public void DestroyObject(WorldObject worldObject)
+    {
+        worldObject.OnDestroy();
+        objects.Remove(worldObject);
+    }
+
     public List<Cell> GetCells(List<Type> worldObjectType, Vector2Int pos) 
     {
         List<Cell> cells = new();

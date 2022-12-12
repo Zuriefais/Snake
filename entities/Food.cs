@@ -39,11 +39,9 @@ class Food: WorldObject
         }
     }
 
-    public override void RemoveCell(Vector2Int position)
+    public override void OnDestroy()
     {
-        base.RemoveCell(position);
         Food newFood = new(world);
         world.AddObject(newFood);
-        world.objects.Remove(this);
     }
 }

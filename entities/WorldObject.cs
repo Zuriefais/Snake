@@ -37,6 +37,11 @@ public abstract class WorldObject
         }   
     }
 
+    public virtual void OnDestroy()
+    {
+
+    }
+
     public void RecalculatePosition() {
         Vector2Int objPosDif = new(int.MaxValue, int.MaxValue);
         foreach (var cell in cells)
