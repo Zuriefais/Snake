@@ -4,6 +4,11 @@ public abstract class WorldObject
     public Vector2Int position;
     public World world;
 
+    public WorldObject(World world) 
+    {
+        this.world = world;
+    }
+
     public void AddCell(Cell cell) 
     {
         cells.Add(cell);

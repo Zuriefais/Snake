@@ -4,15 +4,13 @@ using Spectre.Console;
 
 class Food: WorldObject
 {
-    public Food(World world) 
+    public Food(World world): base(world)
     {
-        this.world = world;
         Spawn();
     }
 
-    public Food(World world, Vector2Int pos)
+    public Food(World world, Vector2Int pos): base(world)
     {
-        this.world = world;
         cells.Add(new('⦿', new(foreground:  new Color(128, 0, 0)), pos));
         world.debugInfo["food pos"] = cells[0].position.x + ", " + cells[0].position.y;
         RecalculatePosition();

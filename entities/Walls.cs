@@ -2,9 +2,8 @@ using Spectre.Console;
 
 public class Walls: WorldObject
 {
-    public Walls(Type type, int width, int height, Vector2Int pos, World world) 
+    public Walls(Type type, int width, int height, Vector2Int pos, World world): base(world)
     {
-        this.world = world;
         switch(type) 
         {
             case Type.Square:

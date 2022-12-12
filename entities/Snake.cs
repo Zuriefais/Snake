@@ -4,8 +4,8 @@ public class Snake: WorldObject
 {
     public Vector2Int moveDirection = new(1, 0);
 
-    public Snake(World world, int length, Vector2Int pos, Input input) {
-        this.world = world;
+    public Snake(World world, int length, Vector2Int pos, Input input): base(world)
+    {
         for (int i = 0; i < length; i++)
         {
             this.cells.Add(
