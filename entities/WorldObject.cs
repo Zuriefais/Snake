@@ -21,6 +21,17 @@ public abstract class WorldObject
         return cell;
     }
 
+    public virtual void RemoveCell(Vector2Int position)
+    {
+        for (int i = 0; i < cells.Count; i++)
+        {
+            if(cells[i].position.IsEqual(position))
+            {
+                cells.RemoveAt(i);
+            }
+        }   
+    }
+
     public void RecalculatePosition() {
         Vector2Int objPosDif = new(int.MaxValue, int.MaxValue);
         foreach (var cell in cells)

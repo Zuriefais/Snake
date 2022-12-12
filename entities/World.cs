@@ -33,6 +33,17 @@ public class World {
         }
     }
 
+    public WorldObject? GetObject(Type type)
+    {
+        foreach (var obj in objects)
+        {
+            if(obj.GetType() == type) {
+                return obj;
+            }
+        }
+        return null;
+    }
+
     public List<Cell> GetCells(List<Type> worldObjectType, Vector2Int pos) 
     {
         List<Cell> cells = new();

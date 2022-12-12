@@ -76,32 +76,25 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\zurie\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "/Users/zuriefais/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\zurie\\OneDrive\\Документы\\GitHub\\Snake\\snakeOnline.csproj",
+      "projectUniqueName": "/Users/zuriefais/Desktop/snakeOnline/Snake/snakeOnline.csproj",
       "projectName": "snakeOnline",
-      "projectPath": "C:\\Users\\zurie\\OneDrive\\Документы\\GitHub\\Snake\\snakeOnline.csproj",
-      "packagesPath": "C:\\Users\\zurie\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\zurie\\OneDrive\\Документы\\GitHub\\Snake\\obj\\",
+      "projectPath": "/Users/zuriefais/Desktop/snakeOnline/Snake/snakeOnline.csproj",
+      "packagesPath": "/Users/zuriefais/.nuget/packages/",
+      "outputPath": "/Users/zuriefais/Desktop/snakeOnline/Snake/obj/",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\zurie\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "/Users/zuriefais/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net7.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
+        "/usr/local/share/dotnet/library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -141,7 +134,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.100/RuntimeIdentifierGraph.json"
       }
     }
   }

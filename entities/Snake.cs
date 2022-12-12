@@ -10,7 +10,7 @@ public class Snake: WorldObject
         {
             this.cells.Add(
                 new(
-                    '■',
+                    '◌',
                     new Style(foreground: new Color(15, 71, 45)),
                     moveDirection.Multiply(i)
                 )
@@ -37,19 +37,31 @@ public class Snake: WorldObject
         Vector2Int pos = cells[cells.Count-1].position.Plus(moveDirection).Plus(this.position);
         world.debugInfo["snakeHeadPosition"] = pos.x + ", " + pos.y;
         List<Cell> nextCells = world.GetCells(new() {typeof(Walls), typeof(Snake)}, pos);
+        List<Cell> nextFoodCell = world.GetCells(new() {typeof(Food)}, pos);
+        world.debugInfo["next food cells count"] = nextFoodCell.Count.ToString();
         if(nextCells.Count != 0) 
         {   
-            world.state = World.State.Lose;
+            world.state = World.State.Lose;     
         }
         else
         {
             cells.Add(
                 new(
-                    '■',
+                    '◌',
                     new Style(foreground: new Color(15, 71, 45)),
                     cells[cells.Count-1].position.Plus(moveDirection)
             ));
-            cells.RemoveAt(0);
+            
+            if(nextFoodCell.Count == 0) 
+            {
+                cells.RemoveAt(0);
+            }
+            else
+            {
+                WorldObject? obj = world.GetObject(typeof(Food));
+                if(obj != null) obj.RemoveCell(pos.Minus(obj.position));
+            }
+            
         }
         world.debugInfo["snakePosition"] = position.x + ", " + position.y;
         RecalculatePosition();
