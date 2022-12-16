@@ -1,26 +1,32 @@
 {
   "format": 1,
   "restore": {
-    "/Users/zuriefais/Desktop/snakeOnline/Snake/snakeOnline.csproj": {}
+    "C:\\Users\\zurie\\OneDrive\\Документы\\GitHub\\Snake\\snakeOnline.csproj": {}
   },
   "projects": {
-    "/Users/zuriefais/Desktop/snakeOnline/Snake/snakeOnline.csproj": {
+    "C:\\Users\\zurie\\OneDrive\\Документы\\GitHub\\Snake\\snakeOnline.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/zuriefais/Desktop/snakeOnline/Snake/snakeOnline.csproj",
+        "projectUniqueName": "C:\\Users\\zurie\\OneDrive\\Документы\\GitHub\\Snake\\snakeOnline.csproj",
         "projectName": "snakeOnline",
-        "projectPath": "/Users/zuriefais/Desktop/snakeOnline/Snake/snakeOnline.csproj",
-        "packagesPath": "/Users/zuriefais/.nuget/packages/",
-        "outputPath": "/Users/zuriefais/Desktop/snakeOnline/Snake/obj/",
+        "projectPath": "C:\\Users\\zurie\\OneDrive\\Документы\\GitHub\\Snake\\snakeOnline.csproj",
+        "packagesPath": "C:\\Users\\zurie\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\zurie\\OneDrive\\Документы\\GitHub\\Snake\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "/Users/zuriefais/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\zurie\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
         ],
         "sources": {
-          "/usr/local/share/dotnet/library-packs": {},
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -39,9 +45,17 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "dependencies": {
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.2, )"
+            },
             "Spectre.Console": {
               "target": "Package",
               "version": "[0.45.0, )"
+            },
+            "WatsonWebsocket": {
+              "target": "Package",
+              "version": "[4.0.1, )"
             }
           },
           "imports": [
@@ -60,7 +74,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.100/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     }

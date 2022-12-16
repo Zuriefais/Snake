@@ -8,10 +8,20 @@
     ".NETCoreApp,Version=v7.0": {
       "snakeOnline/1.0.0": {
         "dependencies": {
-          "Spectre.Console": "0.45.0"
+          "Newtonsoft.Json": "13.0.2",
+          "Spectre.Console": "0.45.0",
+          "WatsonWebsocket": "4.0.1"
         },
         "runtime": {
           "snakeOnline.dll": {}
+        }
+      },
+      "Newtonsoft.Json/13.0.2": {
+        "runtime": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "assemblyVersion": "13.0.0.0",
+            "fileVersion": "13.0.2.27524"
+          }
         }
       },
       "Spectre.Console/0.45.0": {
@@ -25,7 +35,15 @@
           }
         }
       },
-      "System.Memory/4.5.5": {}
+      "System.Memory/4.5.5": {},
+      "WatsonWebsocket/4.0.1": {
+        "runtime": {
+          "lib/net7.0/WatsonWebsocket.dll": {
+            "assemblyVersion": "4.0.1.0",
+            "fileVersion": "4.0.1.0"
+          }
+        }
+      }
     }
   },
   "libraries": {
@@ -33,6 +51,13 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "Newtonsoft.Json/13.0.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-R2pZ3B0UjeyHShm9vG+Tu0EBb2lC8b0dFzV9gVn50ofHXh9Smjk6kTn7A/FdAsC8B5cKib1OnGYOXxRBz5XQDg==",
+      "path": "newtonsoft.json/13.0.2",
+      "hashPath": "newtonsoft.json.13.0.2.nupkg.sha512"
     },
     "Spectre.Console/0.45.0": {
       "type": "package",
@@ -47,6 +72,13 @@
       "sha512": "sha512-XIWiDvKPXaTveaB7HVganDlOCRoj03l+jrwNvcge/t8vhGYKvqV+dMv6G4SAX2NoNmN0wZfVPTAlFwZcZvVOUw==",
       "path": "system.memory/4.5.5",
       "hashPath": "system.memory.4.5.5.nupkg.sha512"
+    },
+    "WatsonWebsocket/4.0.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-kwavB4iFS05zUNqXaY8K01ju4UzXXs9bUu4yXZtAO9HUJdHIEch28Y7zUIry7d2lhqofUwQmf4S2WyBDZPwmKQ==",
+      "path": "watsonwebsocket/4.0.1",
+      "hashPath": "watsonwebsocket.4.0.1.nupkg.sha512"
     }
   }
 }

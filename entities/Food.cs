@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using Spectre.Console;
 
+[Serializable]
 class Food: WorldObject
 {
     public Food(World world): base(world)

@@ -1,5 +1,6 @@
 using Spectre.Console;
 
+[Serializable]
 public class Snake: WorldObject
 {
     public Vector2Int moveDirection = new(1, 0);

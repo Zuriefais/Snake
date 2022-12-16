@@ -1,3 +1,4 @@
+[Serializable]
 public abstract class WorldObject
 {
     public List<Cell> cells {get; private set;} = new();
@@ -12,6 +13,11 @@ public abstract class WorldObject
     public void AddCell(Cell cell) 
     {
         cells.Add(cell);
+    }
+
+    public void AddCells(List<Cell> cells)
+    {
+        this.cells.AddRange(cells);
     }
     
     public Cell? GetCell(Vector2Int position) 

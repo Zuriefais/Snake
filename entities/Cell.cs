@@ -1,5 +1,6 @@
 using Spectre.Console; 
 
+[Serializable]
 public class Cell
 {
     public string printedCell

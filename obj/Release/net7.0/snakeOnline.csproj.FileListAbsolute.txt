@@ -1,0 +1,17 @@
+C:\Users\zurie\OneDrive\Документы\GitHub\Snake\bin\Release\net7.0\snakeOnline.exe
+C:\Users\zurie\OneDrive\Документы\GitHub\Snake\bin\Release\net7.0\snakeOnline.deps.json
+C:\Users\zurie\OneDrive\Документы\GitHub\Snake\bin\Release\net7.0\snakeOnline.runtimeconfig.json
+C:\Users\zurie\OneDrive\Документы\GitHub\Snake\bin\Release\net7.0\snakeOnline.dll
+C:\Users\zurie\OneDrive\Документы\GitHub\Snake\bin\Release\net7.0\snakeOnline.pdb
+C:\Users\zurie\OneDrive\Документы\GitHub\Snake\bin\Release\net7.0\Spectre.Console.dll
+C:\Users\zurie\OneDrive\Документы\GitHub\Snake\obj\Release\net7.0\snakeOnline.csproj.AssemblyReference.cache
+C:\Users\zurie\OneDrive\Документы\GitHub\Snake\obj\Release\net7.0\snakeOnline.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\zurie\OneDrive\Документы\GitHub\Snake\obj\Release\net7.0\snakeOnline.AssemblyInfoInputs.cache
+C:\Users\zurie\OneDrive\Документы\GitHub\Snake\obj\Release\net7.0\snakeOnline.AssemblyInfo.cs
+C:\Users\zurie\OneDrive\Документы\GitHub\Snake\obj\Release\net7.0\snakeOnline.csproj.CoreCompileInputs.cache
+C:\Users\zurie\OneDrive\Документы\GitHub\Snake\obj\Release\net7.0\snakeOnline.csproj.CopyComplete
+C:\Users\zurie\OneDrive\Документы\GitHub\Snake\obj\Release\net7.0\snakeOnline.dll
+C:\Users\zurie\OneDrive\Документы\GitHub\Snake\obj\Release\net7.0\refint\snakeOnline.dll
+C:\Users\zurie\OneDrive\Документы\GitHub\Snake\obj\Release\net7.0\snakeOnline.pdb
+C:\Users\zurie\OneDrive\Документы\GitHub\Snake\obj\Release\net7.0\snakeOnline.genruntimeconfig.cache
+C:\Users\zurie\OneDrive\Документы\GitHub\Snake\obj\Release\net7.0\ref\snakeOnline.dll

@@ -1,0 +1,6 @@
+C:\Users\zurie\OneDrive\Документы\GitHub\Snake\bin\Release\net7.0\publish\snakeOnline.exe
+C:\Users\zurie\OneDrive\Документы\GitHub\Snake\bin\Release\net7.0\publish\snakeOnline.dll
+C:\Users\zurie\OneDrive\Документы\GitHub\Snake\bin\Release\net7.0\publish\snakeOnline.deps.json
+C:\Users\zurie\OneDrive\Документы\GitHub\Snake\bin\Release\net7.0\publish\snakeOnline.runtimeconfig.json
+C:\Users\zurie\OneDrive\Документы\GitHub\Snake\bin\Release\net7.0\publish\snakeOnline.pdb
+C:\Users\zurie\OneDrive\Документы\GitHub\Snake\bin\Release\net7.0\publish\Spectre.Console.dll

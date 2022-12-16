@@ -10,6 +10,8 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Spectre.Console" Version="0.45.0" />
+    <PackageReference Include="WatsonWebsocket" Version="4.0.1" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.2" />
   </ItemGroup>
 
 </Project>

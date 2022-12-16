@@ -74,6 +74,7 @@ public class World {
 
     public void AddObject(WorldObject obj) 
     {
+        obj.world = this;
         objects.Add(obj);
     }
 

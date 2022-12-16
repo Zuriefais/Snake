@@ -1,5 +1,6 @@
 using Spectre.Console;
 
+[Serializable]
 public class Walls: WorldObject
 {
     public Walls(Type type, int width, int height, Vector2Int pos, World world): base(world)
