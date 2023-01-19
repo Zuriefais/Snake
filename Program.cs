@@ -38,19 +38,32 @@ server.ClientDisconnected += (s, e) => {
     connectedPlayers.Remove(e.Client.Guid);
 };
 server.Start();
+string objectsJson = "[";
+for (int i = 0; i < world.objects.Count(); i++)
+{
+    if(i != 0) objectsJson = objectsJson+",";
+    objectsJson = "{\"width\":"+world.width+",\"height\":"+world.height+","+objectsJson+"\"position\":"+JsonConvert.SerializeObject(world.objects[i].position) +",\"cells\":"+ JsonConvert.SerializeObject(world.objects[i].cells)+"}";
+}
+objectsJson = objectsJson + "]";
+Console.WriteLine(objectsJson);
 
-Console.WriteLine(JsonConvert.SerializeObject(world.objects[1]));
 
 void MessageReceived(object? sender, MessageReceivedEventArgs args) 
 { 
     string data = Encoding.UTF8.GetString(args.Data);
     Console.WriteLine("Message received from " + args.Client.ToString() + ": " + data);
-    if(Encoding.UTF8.GetString(args.Data) == "gameComponentInitialized") {
-        SendAllObjects(args.Client.Guid);
+    var dataDeserialized = JsonConvert.DeserializeObject<connectData>(data);
+    Console.WriteLine(dataDeserialized + " " + dataDeserialized.GetType);
+    string objectsJson = "[";
+    for (int i = 0; i < world.objects.Count(); i++)
+    {
+        if(i != 0) objectsJson = objectsJson+",";
+        objectsJson = objectsJson+"{\"position\":"+JsonConvert.SerializeObject(world.objects[i].position) +",\"cells\":"+ JsonConvert.SerializeObject(world.objects[i].cells)+"}";
     }
-    else {
-        Console.WriteLine("else");
-    }
+    objectsJson = objectsJson + "]";
+    Console.WriteLine(objectsJson);
+    server.SendAsync(args.Client.Guid, objectsJson);
+    Console.WriteLine(JsonConvert.DeserializeObject(data)+" "+dataDeserialized.value);
     Console.WriteLine(connectedPlayers + " " + connectedPlayers.Count());
     foreach (var player in connectedPlayers)
     {
@@ -62,9 +75,13 @@ void MessageReceived(object? sender, MessageReceivedEventArgs args)
 
 void SendAllObjects(Guid target) 
 {
-    Console.WriteLine(world.objects[0]);
-    Console.WriteLine(JsonConvert.SerializeObject(world.objects[0]));
-    string objectsJson = JsonConvert.SerializeObject(world.objects);
+    string objectsJson = "[";
+    for (int i = 0; i < world.objects.Count(); i++)
+    {
+        if(i != 0) objectsJson = objectsJson+",";
+        objectsJson = objectsJson+"{\"position\":"+JsonConvert.SerializeObject(world.objects[i].position) +",\"cells\":"+ JsonConvert.SerializeObject(world.objects[i].cells)+"}";
+    }
+    objectsJson = objectsJson + "]";
     Console.WriteLine(objectsJson);
     server.SendAsync(target, objectsJson);
 }
@@ -79,4 +96,8 @@ while(false)
 while (true)
 {
     
+}
+
+class connectData {
+    public string value = "";
 }
